@@ -16,7 +16,8 @@ export class GithubController {
     }
 
     @Get(":username")
-    getUserDetails(@Param() params): any {
+    // @ts-ignore
+    getUserDetails(@Param() params) {
         return this.githubServices.getUserDetails(params.username);
     }
 }
