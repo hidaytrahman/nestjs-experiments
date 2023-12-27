@@ -58,7 +58,7 @@ export class GithubServices {
 
 
         // console.log(githubProfileData)
-        console.log(githubFollowerList)
+        // console.log(githubFollowerList)
         // console.log(getFilteredObject(filteredGithubProfile, githubProfileData))
 
 
@@ -67,7 +67,8 @@ export class GithubServices {
             message: `User details has been fectched for ${username}`,
             ...getFilteredObject(filteredGithubProfile, githubProfile),
             repos: filteredFieldsRepo,
-            followers: githubFollowerList
+            followers: githubFollowerList,
+            brief: `Hi! my name is ${githubProfile.name},  ${githubProfile.company ? `Currently I am working for  ${githubProfile.company}` : ''} ${githubProfile.location ? `I live in ${githubProfile.location}.` : ''} ${githubProfile.hireable ? 'I am looking for new opportunity.' : ''}`
         }
     }
 }
