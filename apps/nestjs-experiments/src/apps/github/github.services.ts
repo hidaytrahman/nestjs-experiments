@@ -1,9 +1,11 @@
 import { HttpService } from "@nestjs/axios";
 import { Injectable } from "@nestjs/common";
 import { lastValueFrom, map } from "rxjs";
-import { API_BASE_URL } from "src/config/api.config";
+// import { API_BASE_URL } from "src/config/api.config";
 import { filteredGithubProfile, filteredGithubRepo } from "./utils";
-import { getFilteredObject } from "src/shared/utils";
+// import { getFilteredObject } from "src/shared/utils";
+import { API_BASE_URL } from "../../config/api.config";
+import { getFilteredObject } from "../../shared/utils";
 
 
 @Injectable()
